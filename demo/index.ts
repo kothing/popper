@@ -1,5 +1,5 @@
-import {
-  Popper, createArrow, PLACEMENT, EmitType,
+import Popper, {
+  createArrow, PLACEMENT, EmitType,
 } from '../src';
 
 window.onload = function () {
