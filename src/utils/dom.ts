@@ -3,15 +3,15 @@
  */
 
 export function $<T extends HTMLElement>(
-  desc?: string,
+  tagName?: string,
   attrs?: { [key: string]: any },
   children?: string | Array<Node>,
   classPrefix = '',
 ): T {
   let match: string[] = [];
 
-  if (desc) {
-    match = /([\w-]+)?(?:#([\w-]+))?((?:\.(?:[\w-]+))*)/.exec(desc) || [];
+  if (tagName) {
+    match = /([\w-]+)?(?:#([\w-]+))?((?:\.(?:[\w-]+))*)/.exec(tagName) || [];
   }
 
   const el = document.createElement(match[1] || 'div');
