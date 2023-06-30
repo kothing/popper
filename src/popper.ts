@@ -1,6 +1,6 @@
 import {
-  addClass, Destroyable, removeClass, destroy, throttle, $, getChangedAttrs, Drag, clamp,
-} from 'wblib';
+  $, addClass, removeClass, destroy, throttle, getChangedAttrs, Drag, clamp,
+} from './utils';
 import type {
   Position, Rect, PopperConfig, CssName, TransitionInfo,
 } from './type';
@@ -35,6 +35,9 @@ export function createArrow(style?: CSSStyleDeclaration, cls?: string) {
   return el as HTMLElement;
 }
 
+/**
+ * Popper
+ */
 export class Popper implements Destroyable {
   el!: HTMLElement;
 
